@@ -1,5 +1,9 @@
-export default function SkillListItem(props) {
+import './SkillListItem.css';
+
+export default function SkillListItem({ skill, index }) {
     return (
-        <li>{props.skill}</li>
+        <li className='SkillListItem'>
+            {skill}
+        </li>
     );
 }

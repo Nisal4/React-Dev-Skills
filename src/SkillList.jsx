@@ -1,11 +1,11 @@
 import SkillListItem from "./SkillListItem";
 
-export default function SkillList() {
+export default function SkillList({ skills }) {
     return (
-        <ul>
-            <li>Skill List Item</li>
-            <li>Skill List Item</li>
-            <li>Skill List Item</li>
+        <ul className="SkillList">
+            {skills.map((t, idx) => (
+                <SkillListItem skill={t} index={idx} key={idx} />
+            ))}
         </ul>
     );
 }
