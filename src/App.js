@@ -1,8 +1,11 @@
-import logo from './logo.svg';
 import './style.css';
+import SkillList from './SkillList';
 
 export default function App() {
   return (
-    <h1>React Dev Skills</h1>
+    <div className='App'>
+      <h1>React Dev Skills</h1>
+      <SkillList />
+    </div>
   );
 }
