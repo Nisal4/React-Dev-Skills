@@ -3,11 +3,13 @@ import "./NewSkillForm.css";
 
 export default function NewSkillForm({ addSkill }) {
     const [newSkill, setNewSkill] = useState("");
+    const [newLevel, setNewLevel] = useState(3);
 
     function handleAddSkill(e) {
         e.preventDefault();
-        addSkill(newSkill);
+        addSkill({ name: newSkill, level: newLevel });
         setNewSkill("");
+        setNewLevel(3);
     }
 
 
@@ -24,13 +26,12 @@ export default function NewSkillForm({ addSkill }) {
                 />
                 <label>Level</label>
                 <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
                 </select>
-                <br />
                 <button type="submit">ADD SKILL</button>
             </form>
         </div>
