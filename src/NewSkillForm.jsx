@@ -25,7 +25,10 @@ export default function NewSkillForm({ addSkill }) {
                 pattern=".{3,}"
                 />
                 <label>Level</label>
-                <select>
+                <select
+                value={newLevel}
+                onChange={(e) => setNewLevel(e.target.value)} 
+                >
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
